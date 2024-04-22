@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common stuff
+# Inherit some common Evolution X stuff
 TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
@@ -14,7 +14,9 @@ DEVICE_PATH := device/google/tangorpro
 VENDOR_PATH := vendor/google/tangorpro
 $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
 $(call inherit-product, device/google/gs201/lineage_common.mk)
+$(call inherit-product, device/google/gs201/evolution_common.mk)
 $(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-lineage.mk)
+$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-evolution.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
